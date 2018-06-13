@@ -10,6 +10,9 @@ trait CafeServices {
   @throws[ItemNotSupportedException]("One or more MenuItems are not supported")
   def standardBill(items: Seq[MenuItem]): Price
 
+  @throws[ItemNotSupportedException]("if any MenuItem is not supported")
+  def serviceCharge(items: Seq[MenuItem]): Price
+
 }
 
 object CafeServices {
