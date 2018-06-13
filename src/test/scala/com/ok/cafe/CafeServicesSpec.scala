@@ -1,7 +1,7 @@
 package com.ok.cafe
 
 import com.ok.cafe.model.ItemNotSupportedException
-import org.scalatest.{Matchers, WordSpec}
+import org.scalatest.{ Matchers, WordSpec }
 
 class CafeServicesSpec extends WordSpec with Matchers {
   private val cafeService = CafeServices()

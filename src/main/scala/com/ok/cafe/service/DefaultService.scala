@@ -1,6 +1,6 @@
 package com.ok.cafe.service
 
-import com.ok.cafe.{CafeServices, model}
+import com.ok.cafe.{ CafeServices, model }
 import com.ok.cafe.model.MenuItem
 
 private[cafe] class DefaultService extends CafeServices {
