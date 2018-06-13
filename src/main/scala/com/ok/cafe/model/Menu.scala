@@ -27,10 +27,10 @@ private[cafe] sealed trait MenuItem {
 private[cafe] object MenuItem {
   def apply(itemName: String): MenuItem = {
     itemName match {
-      case "Cola" => Cola()
-      case "Coffee" => Coffee()
+      case "Cola"            => Cola()
+      case "Coffee"          => Coffee()
       case "Cheese Sandwich" => CheeseSandwich()
-      case "Steak Sandwich" => SteakSandwich()
+      case "Steak Sandwich"  => SteakSandwich()
       case _ =>
         throw ItemNotSupportedException(s"item not not supported: $itemName")
     }
@@ -38,21 +38,21 @@ private[cafe] object MenuItem {
 }
 
 private[model] case class Cola(price: Double = 0.5)
-  extends MenuItem
-  with Drink
-  with Cold
+    extends MenuItem
+    with Drink
+    with Cold
 
 private[model] case class Coffee(price: Double = 1)
-  extends MenuItem
-  with Drink
-  with Hot
+    extends MenuItem
+    with Drink
+    with Hot
 
 private[model] case class CheeseSandwich(price: Double = 2)
-  extends MenuItem
-  with Food
-  with Cold
+    extends MenuItem
+    with Food
+    with Cold
 
 private[model] case class SteakSandwich(price: Double = 4.5)
-  extends MenuItem
-  with Food
-  with Hot
+    extends MenuItem
+    with Food
+    with Hot

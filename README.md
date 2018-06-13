@@ -17,3 +17,7 @@ Add support for a service charge :
 * When all purchased items are drinks no service charge is applied
 * When purchased items include any food apply a service charge of 10% to the total bill (rounded to 2 decimal places)
 * When purchased items include any hot food apply a service charge of 20% to the total bill with a maximum £20 service charge
+
+## Assumptions
+The data type of the the food price is selected as BigDecimal as opposed to using a DomainObject such as Money. This is because BigDecimal is better in rounding (https://alvinalexander.com/scala/scala-money-currency-bigdecimal-class-libraries)
+The code ignores the non-available menu items and continues processing.
